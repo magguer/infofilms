@@ -6,9 +6,9 @@ import axios from 'axios';
 import './App.css';
 //Componentes
 import Header from './components/Header';
-
 import MoviesList from './components/MoviesList';
 import Hero from './components/Hero';
+import Spinner from './components/Spinner';
 
 function App() {
   const [films, setFilms] = useState(null);
@@ -29,12 +29,14 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='App'>
       <div className='shadow-lg fixed w-full z-50'>
         <Header />
       </div>
       {/* Hero */}
-      <Hero films={films} />
+      <div className='hero'>
+        <Hero films={films} />
+      </div>
       {/*       Rating Films */}
       <div className="flex justify-end pt-7 mr-10">
         <ReactStars
@@ -49,9 +51,7 @@ function App() {
         />
       </div>
       {films === null ?
-        <div className="flex justify-center h-72 items-center text-white">
-          Cargando
-        </div>
+        <div className='flex justify-center'><Spinner /></div>
         :
         <MoviesList films={films} star={star} />}
 

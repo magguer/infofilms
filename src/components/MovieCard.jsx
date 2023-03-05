@@ -1,3 +1,5 @@
+import "../animations/MovieCardAn.css";
+
 function MovieCard({ film }) {
   let valorationStyle;
 
@@ -10,17 +12,14 @@ function MovieCard({ film }) {
   }
 
   return (
-    <div className="flex justify-center">
-      <a
-        href=""
-        className="text-white w-full shadow hover:shadow-xl bg-[#0f151f] text-center rounded-lg hover:scale-[105%] transition-all duration-200"
-      >
+    <div className="flex justify-center cursor-pointer ">
+      <a className="text-white w-full shadow hover:shadow-xl bg-[#0f151f] text-center rounded-lg transition-all duration-200">
         <div>
           <p className="px-4 py-2 text-sm font-bold">{film.title}</p>
         </div>
         <div>
           <p className={`px-4 py-2 text-sm ${valorationStyle}`}>
-            Valoración: <spam className="font-bold">{film.vote_average}</spam>
+            Valoración: {film.vote_average}
           </p>
         </div>
         <div>
