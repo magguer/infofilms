@@ -20,17 +20,24 @@ function MovieCard({ film }) {
     <div
       onMouseEnter={() => setHoverCar(true)}
       onMouseLeave={() => setHoverCar(false)}
-      className="flex justify-center cursor-pointer  hover:top-[-3px] hover:left-[-3px] z-0"
+      className=" relative flex justify-center cursor-pointer transition-all duration-150 hover:scale-[102%]"
     >
-      <div className="">
+      <div className="relative overflow-hidden">
+        <div
+          className={
+            hoverCard
+              ? `opacity-1 absolute flex items-center justify-center top-0 transition-all w-full h-8 bg-black bg-opacity-60 rounded-t-lg  duration-200 delay-200`
+              : "opacity-0 absolute  flex items-center justify-center top-[-30px] transition-all w-full   h-8 bg-black bg-opacity-60 rounded-t-lg duration-200"
+          }
+        >
+          <p className="text-white text-base mx-3">
+            {(film.vote_average / 2).toFixed(1)} ☆
+          </p>
+        </div>
         <a className="text-white w-full shadow bg-[#0f151f] text-center transition-all duration-200">
           <div>
             <img
-              className={
-                hoverCard
-                  ? "object-cover w-full h-[32rem] tablet:h-96 rounded-t-lg transition-all duration-200"
-                  : "object-cover w-full  h-[32rem] tablet:h-96 rounded-lg transition-all duration-200"
-              }
+              className="object-cover w-full h-[32rem] tablet:h-96 rounded-lg transition-all duration-200"
               src={
                 film.poster_path
                   ? `https://image.tmdb.org/t/p/w500/${film.poster_path}`
@@ -39,16 +46,18 @@ function MovieCard({ film }) {
               alt=""
             />
           </div>
-          <div>
-            <p
-              className={
-                hoverCard
-                  ? `opacity-1 px-4 text-sm ${valorationStyle} rounded-b-lg transition-all duration-200`
-                  : "opacity-0 px-4 text-sm transition-all duration-200"
-              }
-            >
-              {film.vote_average}
-            </p>
+          <div
+            className={
+              hoverCard
+                ? `opacity-1 absolute bottom-0 transition-all w-full h-20 bg-black bg-opacity-60 rounded-b-lg  duration-200`
+                : "opacity-0 absolute bottom-[-30px] transition-all h-20 w-full bg-black bg-opacity-60 rounded-b-lg   duration-200"
+            }
+          >
+            <div className="w-full flex justify-center">
+              <h2 className="font-bold max-w-[200px] mt-3 max-h-[50px] overflow-hidden">
+                {film.title}
+              </h2>
+            </div>
           </div>
         </a>
       </div>

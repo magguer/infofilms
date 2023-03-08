@@ -8,14 +8,20 @@ function BurguerMenuBody({ setShowBurguerMenu, showBurguerMenu }) {
   });
 
   return (
-    <div className="relative">
+    <div className="relative shadow">
       <div className="shadow h-screen w-[300px] bg-gray-800 bg-opacity-80 translate-all duration-200 mt-[70px] text-white">
         <div onClick={() => setShowBurguerMenu(!showBurguerMenu)}>
-          <ButtonMenuBurguer text={"Home"} path={"/"} blanck={false} />
+          <ButtonMenuBurguer
+            text={"Movies"}
+            path={"/"}
+            blanck={false}
+            img={"/movie.png"}
+          />
         </div>
         <div onClick={() => setShowBurguerMenu(!showBurguerMenu)}>
           <ButtonMenuBurguer
             text={"Quiénes somos?"}
+            img={"/about.png"}
             path={"/about"}
             blanck={false}
           />
@@ -23,6 +29,7 @@ function BurguerMenuBody({ setShowBurguerMenu, showBurguerMenu }) {
         <div onClick={() => setShowBurguerMenu(!showBurguerMenu)}>
           <ButtonMenuBurguer
             text={"Hack Adacemy"}
+            img={"/hack.png"}
             path={"https://www.ha.dev/"}
             blanck={true}
           />
@@ -30,6 +37,7 @@ function BurguerMenuBody({ setShowBurguerMenu, showBurguerMenu }) {
         <div onClick={() => setShowBurguerMenu(!showBurguerMenu)}>
           <ButtonMenuBurguer
             text={"API Movies"}
+            img={"/tmdb.png"}
             path={"https://www.themoviedb.org/"}
             blanck={true}
           />

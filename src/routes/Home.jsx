@@ -14,23 +14,10 @@ function Home({
   handleFilmModal,
 }) {
   const movieList = useRef(null);
-  const [genreId, setGenreId] = useState(28);
-  const [genres, setGenres] = useState(null);
 
   //Modal - false
   useEffect(() => {
     handleCloseFilmModal(false);
-  }, []);
-
-  // Axio - Generos de Películas
-  useEffect(() => {
-    const getGenres = async () => {
-      const response = await axios.get(
-        `https://api.themoviedb.org/3/genre/movie/list?api_key=59540ca3d1f963deca67c4eaf91a2dc5&language=es-US`
-      );
-      setGenres(response.data.genres);
-    };
-    getGenres();
   }, []);
 
   /*   Scroll to movieList */
@@ -54,9 +41,6 @@ function Home({
           filmModal={filmModal}
           handleCloseFilmModal={handleCloseFilmModal}
           handleFilmModal={handleFilmModal}
-          genreId={genreId}
-          genres={genres}
-          setGenreId={setGenreId}
         />
       </div>
     </section>

@@ -14,7 +14,7 @@ function MovieModal({ handleCloseFilmModal, filmModal }) {
   });
 
   return (
-    <div className="fixed inset-0 bg-modal">
+    <div className="fixed inset-0 bg-modal z-40">
       <div className="flex items-center justify-center min-h-screen text-center px-8 tablet:px-0">
         <div
           className="fixed inset-0 bg-black bg-opacity-80 cursor-pointer"
@@ -27,13 +27,13 @@ function MovieModal({ handleCloseFilmModal, filmModal }) {
         ) : (
           <div className="inline-block tablet:mt-20 align-bottom bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 modal">
             <button
-              className="absolute right-[-5px] top-[-5px] h-6 w-6 flex border-2 border-white bg-gray-800 hover:bg-gray-700 justify-center rounded-full text-sm translate-all duration-150"
+              className="absolute right-[-5px] top-[-5px] h-6 w-6 flex border-2 border-gray-300 bg-gray-800 hover:bg-gray-700 justify-center rounded-full text-sm translate-all duration-150"
               onClick={handleCloseFilmModal}
             ></button>
 
             <div className="self-end flex text-white">
               <img
-                className="hidden tablet:flex w-64 desktop:w-96 object-contain rounded-l"
+                className="hidden tablet:flex w-64 desktop:w-80 object-contain rounded-l"
                 src={`https://image.tmdb.org/t/p/w500/${filmModal.poster_path}`}
                 alt=""
               />
@@ -48,7 +48,7 @@ function MovieModal({ handleCloseFilmModal, filmModal }) {
                     </span>
                   </div>
                   <div className="w-full my-3 h-[1px] bg-gray-900 rounded"></div>
-                  <p className="max-w-[400px] max-h-[220px] text-start overflow-hidden">
+                  <p className="max-w-[400px] max-h-[195px] text-start overflow-hidden">
                     {filmModal.overview}
                   </p>
                 </div>

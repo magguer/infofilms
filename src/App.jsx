@@ -36,7 +36,7 @@ function App() {
       <div
         className={`fixed z-40 ${
           showBurguerMenu ? styleOn : styleOff
-        } trasition-all duration-150 ease-in-out`}
+        } trasition-all duration-200`}
       >
         <BurguerMenuBody
           showBurguerMenu={showBurguerMenu}

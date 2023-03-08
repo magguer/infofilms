@@ -58,7 +58,7 @@ function MovieBody({ movieId }) {
                 href={filmInfo.homepage}
                 rel="noreferrer"
                 target="_blank"
-                className="hover:bg-gray-800 text-white px-2 py-1 rounded bg-gray-700 transition-all duration-150"
+                className=" text-white px-2 py-1 rounded bg-gray-700 hover:bg-gray-800  opacity-80 hover:opacity-100 transition-all duration-150"
               >
                 Página web
               </a>
@@ -91,15 +91,15 @@ function MovieBody({ movieId }) {
             {/*            InfoFilm2 */}
             <div className="flex flex-col mt-5 gap-3">
               <div className="items-center tablet:items-start flex flex-col">
-                <h3 className="text-xs text-gray-400">
+                <h3 className="text-sm text-gray-400">
                   Realizada en:{" "}
-                  <strong className="text-white text-sm">
+                  <strong className="text-white text-lg">
                     {filmInfo.production_countries[0]?.name}
                   </strong>
                 </h3>
-                <h3 className="text-xs text-gray-400">
+                <h3 className="text-sm text-gray-400">
                   Año:{" "}
-                  <strong className="text-white text-sm">
+                  <strong className="text-white text-lg">
                     {format(new Date(filmInfo.release_date), "yyyy")}
                   </strong>
                 </h3>
