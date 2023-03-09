@@ -47,7 +47,7 @@ function MovieBody({ movieId }) {
           >
             <img
               className="w-8 h-8 opacity-70  "
-              src="/arrows1.png"
+              src="https://i.ibb.co/8mqFZ22/arrows1.png"
               alt="arrow"
             />
           </div>

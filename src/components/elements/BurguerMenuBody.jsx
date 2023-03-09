@@ -13,15 +13,15 @@ function BurguerMenuBody({ setShowBurguerMenu, showBurguerMenu }) {
         <div onClick={() => setShowBurguerMenu(!showBurguerMenu)}>
           <ButtonMenuBurguer
             text={"Movies"}
-            path={"/"}
+            path={"/infofilms"}
             blanck={false}
-            img={"/movie.png"}
+            img={"https://i.ibb.co/RHG5xH3/movie.png"}
           />
         </div>
         <div onClick={() => setShowBurguerMenu(!showBurguerMenu)}>
           <ButtonMenuBurguer
             text={"Quiénes somos?"}
-            img={"/about.png"}
+            img={"https://i.ibb.co/yyn7JHp/about.png"}
             path={"/about"}
             blanck={false}
           />
@@ -29,7 +29,7 @@ function BurguerMenuBody({ setShowBurguerMenu, showBurguerMenu }) {
         <div onClick={() => setShowBurguerMenu(!showBurguerMenu)}>
           <ButtonMenuBurguer
             text={"Hack Adacemy"}
-            img={"/hack.png"}
+            img={"https://i.ibb.co/By26wss/hack.png"}
             path={"https://www.ha.dev/"}
             blanck={true}
           />
@@ -37,7 +37,7 @@ function BurguerMenuBody({ setShowBurguerMenu, showBurguerMenu }) {
         <div onClick={() => setShowBurguerMenu(!showBurguerMenu)}>
           <ButtonMenuBurguer
             text={"API Movies"}
-            img={"/tmdb.png"}
+            img={"https://i.ibb.co/jJ63ttP/tmdb.png"}
             path={"https://www.themoviedb.org/"}
             blanck={true}
           />

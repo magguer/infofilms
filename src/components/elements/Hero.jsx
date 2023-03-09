@@ -22,7 +22,7 @@ function Hero({ handleScrollHome }) {
                 <button className="" onClick={handleScrollHome}>
                   <img
                     className="relative w-20 h-20 opacity-70 top-0 hover:top-2 transition-all duration-200 "
-                    src="arrows1.png"
+                    src="https://i.ibb.co/8mqFZ22/arrows1.png"
                     alt="arrow"
                   />
                 </button>
