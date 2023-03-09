@@ -56,7 +56,7 @@ function App() {
       <div className="py-[70px]">
         <Routes>
           <Route
-            path={"/"}
+            path={"/infofilms"}
             element={
               <Home
                 showModal={showModal}
