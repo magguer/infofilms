@@ -193,13 +193,13 @@ function MoviesList({
                     setGenreId(null);
                     setYearFilm(null);
                   }}
-                  className={`border-2 pb-1 border-gray-800 hover:bg-gray-700  px-4 rounded-full m-0 transition-all duration-200`}
+                  className={`hidden tablet:flex border-2 pb-1 border-gray-800 hover:bg-gray-700  px-4 rounded-full m-0 transition-all duration-200`}
                 >
                   Borrar filtro
                 </button>
               ) : null}
             </div>
-            <div className="flex justify-center tablet:justify-end pt-24 tablet:mr-10">
+            <div className="flex justify-end pt-24 tablet:mr-10">
               <ReactStars
                 value={3}
                 char={"☆"}
