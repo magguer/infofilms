@@ -81,7 +81,7 @@ function MoviesList({
   useEffect(() => {
     const getFilms = async () => {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=59540ca3d1f963deca67c4eaf91a2dc5 &language=es-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_watch_monetization_types=flatrate&vote_average.gte=${star}&with_genres=${genreId}&year=${yearFilm}`
+        `https://api.themoviedb.org/3/discover/movie?api_key=59540ca3d1f963deca67c4eaf91a2dc5&language=es-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_watch_monetization_types=flatrate&vote_average.gte=${star}&with_genres=${genreId}&year=${yearFilm}`
       );
       if (films !== null) {
         setFilms([...films, ...response.data.results]);

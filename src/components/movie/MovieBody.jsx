@@ -38,7 +38,8 @@ function MovieBody({ movieId }) {
           <Spinner />
         </div>
       ) : (
-        <div className="h-[87.8vh] desktop:h-[92.2vh]">
+        <div className="relative h-[87.8vh] desktop:h-[92.2vh]">
+          <div className="absolute w-screen h-[87.8vh] tablet:hidden  bg-black z-5 opacity-70"></div>
           <div className="ml-0 tablet:ml-80 absolute tablet:bg-gradient-to-r from-[#17202e] to-transparent h-[87.8vh] desktop:h-[92.2vh] w-full tablet:w-6/12 z-10 "></div>
           {/*       Back Button */}
           <div
