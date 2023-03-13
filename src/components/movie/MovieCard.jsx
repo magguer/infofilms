@@ -17,12 +17,12 @@ function MovieCard({ film }) {
   }
 
   return (
-    <div
-      onMouseEnter={() => setHoverCar(true)}
-      onMouseLeave={() => setHoverCar(false)}
-      className=" relative flex justify-center cursor-pointer transition-all duration-150 hover:scale-[102%]"
-    >
-      <div className="relative overflow-hidden">
+    <div className=" relative flex justify-center">
+      <div
+        onMouseEnter={() => setHoverCar(true)}
+        onMouseLeave={() => setHoverCar(false)}
+        className="relative overflow-hidden cursor-pointer hover:scale-[102%] transition-all duration-150"
+      >
         <div
           className={
             hoverCard

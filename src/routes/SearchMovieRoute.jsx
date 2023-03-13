@@ -1,6 +1,7 @@
 //Dependencias
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Spinner from "../components/elements/Spinner";
 //Componentes
 import MovieCard from "../components/movie/MovieCard";
@@ -8,12 +9,18 @@ import MovieModal from "../components/movie/MovieModal";
 
 function SearchMovieRoute({
   searchWords,
+  setSearchWords,
   showModal,
   filmModal,
   handleCloseFilmModal,
   handleFilmModal,
 }) {
   const [searchedFilms, setSearchedFilms] = useState(null);
+  const { filmName } = useParams();
+
+  useEffect(() => {
+    setSearchWords(filmName);
+  }, []);
 
   useEffect(() => {
     const getSearch = async () => {
@@ -22,6 +29,11 @@ function SearchMovieRoute({
         url: `https://api.themoviedb.org/3/search/movie?api_key=59540ca3d1f963deca67c4eaf91a2dc5&language=es-US&query=${searchWords}&page=1&include_adult=false`,
       });
       setSearchedFilms(response.data.results);
+      window.history.replaceState(
+        null,
+        `${searchWords}`,
+        `/search/${encodeURI(searchWords)}`
+      );
     };
     getSearch();
   }, [searchWords]);
@@ -60,7 +72,7 @@ function SearchMovieRoute({
           )}
         </div>
       ) : (
-        <div className="flex justify-center">
+        <div className="flex justify-center h-[87.8vh] items-center">
           <Spinner />
         </div>
       )}

@@ -17,7 +17,7 @@ function Home({
 
   //Modal - false
   useEffect(() => {
-    handleCloseFilmModal(false);
+    handleCloseFilmModal();
   }, []);
 
   /*   Scroll to movieList */

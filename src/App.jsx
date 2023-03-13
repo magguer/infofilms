@@ -29,6 +29,7 @@ function App() {
     setFilmModal(filmModal);
     setShowModal(true);
   };
+
   const handleCloseFilmModal = () => setShowModal(false);
 
   return (
@@ -70,10 +71,11 @@ function App() {
           />
           <Route path={"/movie/:id"} element={<MovieRoute />} />
           <Route
-            path={"/search/"}
+            path={"/search/:filmName"}
             element={
               <SearchMovieRoute
                 searchWords={searchWords}
+                setSearchWords={setSearchWords}
                 showModal={showModal}
                 setShowModal={setShowModal}
                 filmModal={filmModal}

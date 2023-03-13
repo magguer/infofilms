@@ -66,7 +66,7 @@ function MovieBody({ movieId }) {
             )}
           </div>
           {/*           InfoFilmFull */}
-          <div className="absolute mt-20 tablet:mt-10  tablet:ml-28 z-20 max-w-[500px] text-white movie-body-img px-8 tablet:px-0">
+          <div className="absolute mt-20 tablet:mt-10  tablet:ml-28 z-20 w-full tablet:max-w-[500px] text-white movie-body-img px-8 tablet:px-0">
             {/*           InfoFilm1 */}
             <div className="text-center tablet:text-start">
               <h2 className="text-white font-bold text-3xl tablet:text-5xl">
